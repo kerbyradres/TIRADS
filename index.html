@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+
+	<head>
+		
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+        
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+		 
+		<title>TI-RADS Calculator &#8211; Calculates TI-RADS Score</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="TI-RADS Calculator &raquo; Feed" href="http://tiradscalculator.com/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.0.9 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-99376392-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-99376392-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/tiradscalculator.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://tiradscalculator.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='davis_fonts-css'  href='//fonts.googleapis.com/css?family=PT+Serif%3A400%2C700%2C400italic%2C700italic&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='davis_style-css'  href='http://tiradscalculator.com/wp-content/themes/davis/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='slb_core-css'  href='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/client/css/app.css?ver=2.7.0' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"false","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"","home_url":"http:\/\/tiradscalculator.com","track_download_as":"event","internal_label":"int","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.0.9'></script>
+<link rel='https://api.w.org/' href='http://tiradscalculator.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tiradscalculator.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://tiradscalculator.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//tiradscalculator.com/?wordfence_lh=1&hid=5651833E82C71B418F9B5FDF173CF77C');
+</script><style>/* CSS added by WP Meta and Date Remover*/.entry-meta {display:none !important;}.home .entry-meta { display: none; }.entry-footer {display:none !important;}.home .entry-footer { display: none; }</style>		<style type="text/css" id="wp-custom-css">
+			/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+
+footer p + p { 
+    
+    font-style: italic;
+    margin-top: 15px; 
+    display: none;
+}
+
+#fbuilder .right_aligned .fields .dfield {
+    float: left;
+    width: 65%;
+    padding-left: 5px;
+}
+
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+	margin-left: -130px;
+    max-width: 200%;
+    overflow: hidden;
+    width: 200%;
+
+}
+
+.content * {
+    max-width: 200%;
+}		</style>
+			
+	</head>
+	
+	<body class="home blog">
+    
+        <header>
+            
+            <p class="toggle-menu" onclick="document.querySelector('body').classList.toggle('show-menu')">Menu</p>
+
+            <div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-22"><a href="http://tiradscalculator.com/" aria-current="page">Home</a></li>
+<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a target="_blank" rel="noopener noreferrer" href="http://tiradscalculator.com/description-of-features/">Description of Features</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="http://tiradscalculator.com/about/">About</a></li>
+</ul></div>
+            <h2><a href="http://tiradscalculator.com">TI-RADS Calculator</a></h2>
+
+                            <p>Calculates TI-RADS Score</p>
+            
+        </header><!-- header -->
+		
+		<div class="wrapper">
+
+            
+                    <div class="post post-1 type-post status-publish format-standard hentry category-tirads-calculator">
+
+                        
+                            <h1 class="title"><a href="http://tiradscalculator.com/tirads-calculator/tirads-calculator/" title="TI-RADS Calculator">TI-RADS Calculator</a></h1>
+
+                        
+                        <div class="content">
+
+                            <p>Online calculator for Thyroid Imaging Reporting and Data System (TI-RADS) based on 2017 ACR white paper with guidance on fine needle aspiration (FNA) and follow-up.</p>
+<p><a href="http://tiradscalculator.com/description-of-features/" target="_blank" rel="noopener noreferrer">Click here for images and description for each of the ultrasound features</a></p>
+<table cellspacing="10">
+<tbody>
+<tr>
+<td nowrap="nowrap"><form name="cp_calculatedfieldsf_pform_1" id="cp_calculatedfieldsf_pform_1" action="?" method="post" enctype="multipart/form-data" class=""><input type="hidden" name="cp_calculatedfieldsf_id" value="6" /><pre style="display:none;"><!--noptimize--><script>form_structure_1=[[{"form_identifier":"","name":"fieldname3","shortlabel":"","index":0,"ftype":"fcheck","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Composition (Choose 1)","layout":"one_column","required":true,"toSubmit":"value","merge":1,"max":-1,"maxError":"Check no more than {0} boxes","showDep":false,"choices":["Cystic or almost completely cystic 0 points","Spongiform 0 points","Mixed cystic and solid 1 point","Solid or almost completely solid 2 points"],"choicesVal":["0","0","1","2"],"choiceSelected":[false,false,false,false],"choicesDep":[[],[],[],[]],"fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname6","shortlabel":"","index":1,"ftype":"fcheck","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Echogenicity (Choose 1)","layout":"one_column","required":true,"toSubmit":"value","merge":1,"max":-1,"maxError":"Check no more than {0} boxes","showDep":false,"choices":["Anechoic 0 points","Hyperechoic or isoechoic 1 point","Hypoechoic 2 points","Very hypoechoic 3 points"],"choicesVal":["0","1","2","3"],"choiceSelected":[false,false,false,false],"choicesDep":[[],[],[],[]],"fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname7","shortlabel":"","index":2,"ftype":"fcheck","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Shape (Choose 1)","layout":"one_column","required":true,"toSubmit":"value","merge":1,"max":-1,"maxError":"Check no more than {0} boxes","showDep":false,"choices":["Wider-than-tall 0 points","Taller-than-wide 3 points"],"choicesVal":["0","3"],"choiceSelected":[false,false],"choicesDep":[[],[]],"fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname10","shortlabel":"","index":3,"ftype":"fcheck","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Margin (Choose 1)","layout":"one_column","required":true,"toSubmit":"value","merge":1,"max":-1,"maxError":"Check no more than {0} boxes","showDep":false,"choices":["Smooth 0 points","Ill-defined 0 points","Lobulated or irregular 2 points","Extra-thyroidal extension 3 points"],"choicesVal":["0","0","2","3"],"choiceSelected":[false,false,false,false],"choicesDep":[[],[],[],[]],"fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname11","shortlabel":"","index":4,"ftype":"fcheck","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Echogenic Foci (Choose All That Apply)","layout":"one_column","required":true,"toSubmit":"value","merge":1,"max":-1,"maxError":"Check no more than {0} boxes","showDep":false,"choices":["None or large comet-tail artifacts 0 points","Macrocalcifications 1 point","Peripheral (rim) calcifications 2 points","Punctate echogenic foci 3 points"],"choicesVal":["0","1","2","3"],"choiceSelected":[false,false,false,false],"choicesDep":[[],[],[],[]],"fBuild":{},"parent":""},{"dependencies":[{"rule":"value==2","complex":false,"fields":["fieldname8"]},{"rule":"value==2","complex":false,"fields":["fieldname18"]},{"rule":"value==0","complex":false,"fields":["fieldname12"]},{"rule":"value==0","complex":false,"fields":["fieldname17"]},{"rule":"value\u003E=7","complex":false,"fields":["fieldname13"]},{"rule":"value\u003E=7","complex":false,"fields":["fieldname22"]},{"rule":"value==3","complex":false,"fields":["fieldname14"]},{"rule":"value==3","complex":false,"fields":["fieldname19"]},{"rule":"value==4","complex":false,"fields":["fieldname15"]},{"rule":"value==4","complex":false,"fields":["fieldname20"]},{"rule":"value==5","complex":false,"fields":["fieldname15"]},{"rule":"value==5","complex":false,"fields":["fieldname20"]},{"rule":"value==6","complex":false,"fields":["fieldname16"]},{"rule":"value==6","complex":false,"fields":["fieldname21"]}],"form_identifier":"","name":"fieldname4","shortlabel":"","index":5,"ftype":"fCalculated","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Total Points","predefined":"","required":false,"size":"medium","toolbar":"default|mathematical","eq":"fieldname3+fieldname6+fieldname7+fieldname10+fieldname11","suffix":"","prefix":"","decimalsymbol":".","groupingsymbol":"","readonly":true,"hidefield":false,"fBuild":{},"parent":"","predefinedClick":false},{"form_identifier":"","name":"fieldname12","shortlabel":"TI-RADS Score","index":6,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"TI-RADS Score","predefined":"TR1","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname17","shortlabel":"Recommendations","index":7,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Recommendations","predefined":"Benign: No FNA","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname8","shortlabel":"TI-RADS Level","index":8,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"TI-RADS Level","predefined":"TR2","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname18","shortlabel":"Recommendations","index":9,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Recommendations","predefined":"Not Suspicious: No FNA","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname14","shortlabel":"TI-RADS Level","index":10,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"TI-RADS Level","predefined":"TR3","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname19","shortlabel":"Recommendations","index":11,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Recommendations","predefined":"Mildly Suspicious: FNA if \u2265 2.5 cm; Follow if \u2265 1.5 cm at 1, 3, and 5 y","predefinedClick":false,"required":false,"readonly":false,"size":"large","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname15","shortlabel":"TI-RADS Level","index":12,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"TI-RADS Level","predefined":"TR4","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname20","shortlabel":"Recommendations","index":13,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Recommendations","predefined":"Moderately Suspicious: FNA if \u2265 1.5 cm; Follow if \u2265 1 cm at 1, 2, 3, and 5 y","predefinedClick":false,"required":false,"readonly":false,"size":"large","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname16","shortlabel":"TI-RADS Level","index":14,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"TI-RADS Level","predefined":"TR4","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname21","shortlabel":"Recommendations","index":15,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Recommendations","predefined":"Moderately Suspicious: FNA if \u2265 1.5 cm; Follow if \u2265 1 cm at 1, 2, 3, and 5 y","predefinedClick":false,"required":false,"readonly":false,"size":"large","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname13","shortlabel":"TI-RADS Level","index":16,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"TI-RADS Level","predefined":"TR5","predefinedClick":false,"required":false,"readonly":false,"size":"medium","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""},{"form_identifier":"","name":"fieldname22","shortlabel":"Recommendations","index":17,"ftype":"ftext","userhelp":"","userhelpTooltip":false,"csslayout":"","title":"Recommendations","predefined":"Highly Suspicious: FNA if \u2265 1 cm; Follow if \u2265 0.5 cm annually until 5 y","predefinedClick":false,"required":false,"readonly":false,"size":"large","minlength":"","maxlength":"","equalTo":"","regExp":"","regExpMssg":"","fBuild":{},"parent":""}],{"0":{"title":"","description":"","formlayout":"right_aligned","formtemplate":"cp_cff_11","evalequations":1,"autocomplete":1,"evalequationsevent":2,"persistence":0,"customstyles":""},"formid":"cp_calculatedfieldsf_pform_1"}];</script><!--/noptimize--></pre>
+<div id="fbuilder">
+  <div id="fbuilder_1">
+      <div id="formheader_1"></div>
+      <div id="fieldlist_1"></div>
+  </div>
+</div>
+<div class="clearer"></div>
+</form>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="metabox_basic_settings" class="postbox" style="text-align: center;"><a href="http://tiradscalculator.com"><img class="alignnone size-full wp-image-157" src="http://tiradscalculator.com/wp-content/uploads/2017/05/reset.jpg" alt="" width="200" height="60" /></a></div>
+<p>&nbsp;</p>
+<div id="metabox_basic_settings" class="postbox"> <a href="http://tiradscalculator.com/wp-content/uploads/2017/05/TIRADS-2017-Flow-Chart.jpg" data-slb-active="1" data-slb-asset="951292425" data-slb-internal="0" data-slb-group="1"><img class="alignnone wp-image-11" src="http://tiradscalculator.com/wp-content/uploads/2017/05/TIRADS-2017-Flow-Chart-300x227.jpg" alt="" width="500" height="379" srcset="http://tiradscalculator.com/wp-content/uploads/2017/05/TIRADS-2017-Flow-Chart-300x227.jpg 300w, http://tiradscalculator.com/wp-content/uploads/2017/05/TIRADS-2017-Flow-Chart-768x582.jpg 768w, http://tiradscalculator.com/wp-content/uploads/2017/05/TIRADS-2017-Flow-Chart-620x470.jpg 620w, http://tiradscalculator.com/wp-content/uploads/2017/05/TIRADS-2017-Flow-Chart.jpg 814w" sizes="(max-width: 500px) 100vw, 500px" /></a></div>
+<div class="postbox" style="text-align: center;">Click image to enlarge</div>
+<p>&nbsp;</p>
+<div class="postbox" style="text-align: center;"><a href="http://tiradscalculator.com/wp-content/uploads/2017/05/JACR-TIRADS-2017-White-Paper.pdf" target="_blank" rel="noopener noreferrer">ACR TI-RADS 2017 White Paper (Click for PDF)</a></div>
+<p></p>
+<div class="postbox" style="text-align: center;"><a href="http://tiradscalculator.com/wp-content/uploads/2017/05/ACR-Thyroid-Ultrasound-Reporting-Lexicon.pdf" target="_blank" rel="noopener noreferrer">ACR Thyroid Ultrasound Reporting Lexicon (Click for PDF</a>)</div>
+<div class="postbox" style="text-align: left;"></div>
+<div class="postbox" style="text-align: left;"></div>
+
+                        </div><!-- .content -->
+
+                        
+                            <div class="meta">
+
+                                <p>
+                                
+                                    <a href="http://tiradscalculator.com/tirads-calculator/tirads-calculator/" title="TI-RADS Calculator"></a>
+
+                                                                        
+                                    
+                                </p>
+
+                                
+                            </div><!-- .meta -->
+
+                        
+                    </div><!-- .post -->
+
+                    	        
+	        <footer>
+		        
+		        <p>&copy; 2020 <a href="http://tiradscalculator.com">TI-RADS Calculator</a></p>
+		        <p>Theme by <a href="http://www.andersnoren.se">Anders Nor&eacute;n</a></p>
+		        
+	        </footer><!-- footer -->
+	        
+	    </div><!-- .wrapper -->
+	    
+	    <link rel='stylesheet' id='cpcff_stylepublic-css'  href='http://tiradscalculator.com/wp-content/plugins/calculated-fields-form/css/stylepublic.css?ver=5.3.2' type='text/css' media='all'  property="stylesheet" />
+<link rel='stylesheet' id='cpcff_jquery_ui-css'  href='http://tiradscalculator.com/wp-content/plugins/calculated-fields-form/css/cupertino/jquery-ui-1.8.20.custom.css?ver=5.3.2' type='text/css' media='all'  property="stylesheet" />
+<link rel='stylesheet' id='cpcff_template_csscp_cff_11-css'  href='http://tiradscalculator.com/wp-content/plugins/calculated-fields-form/templates/11/style.css?ver=1.0.241' type='text/css' media='all'  property="stylesheet" />
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/tooltip.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/calculated-fields-form/js/jQuery.stringify.js?ver=pro'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/calculated-fields-form/js/jquery.validate.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cp_calculatedfieldsf_fbuilder_config_1 = {"obj":"{\"pub\":true,\"identifier\":\"_1\",\"messages\":{\"required\":\"This field is required.\",\"email\":\"Please enter a valid email address.\",\"datemmddyyyy\":\"Please enter a valid date with this format(mm\\\/dd\\\/yyyy)\",\"dateddmmyyyy\":\"Please enter a valid date with this format(dd\\\/mm\\\/yyyy)\",\"number\":\"Please enter a valid number.\",\"digits\":\"Please enter only digits.\",\"max\":\"Please enter a value less than or equal to {0}.\",\"min\":\"Please enter a value greater than or equal to {0}.\",\"previous\":\"Previous\",\"next\":\"Next\",\"pageof\":\"Page {0} of {0}\",\"minlength\":\"Please enter at least {0} characters.\",\"maxlength\":\"Please enter no more than {0} characters.\",\"equalTo\":\"Please enter the same value again.\",\"accept\":\"Please enter a value with a valid extension.\",\"upload_size\":\"The file you've chosen is too big, maximum is {0} kB.\",\"phone\":\"Invalid phone number.\",\"currency\":\"Please enter a valid currency value.\"}}"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/calculated-fields-form/js/cache/all.js?ver=1.0.241'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/calculated-fields-form/templates/11/js.js?ver=1.0.241'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/client/js/prod/lib.core.js?ver=2.7.0'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/client/js/prod/lib.view.js?ver=2.7.0'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/themes/baseline/js/prod/client.js?ver=2.7.0'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/themes/default/js/prod/client.js?ver=2.7.0'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/template-tags/item/js/prod/tag.item.js?ver=2.7.0'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/template-tags/ui/js/prod/tag.ui.js?ver=2.7.0'></script>
+<script type='text/javascript' src='http://tiradscalculator.com/wp-content/plugins/simple-lightbox/content-handlers/image/js/prod/handler.image.js?ver=2.7.0'></script>
+<script type="text/javascript" id="slb_footer">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB && SLB.has_child('View.init') ) { SLB.View.init({"ui_autofit":true,"ui_animate":true,"slideshow_autostart":true,"slideshow_duration":"6","group_loop":true,"ui_overlay_opacity":"0.8","ui_title_default":false,"theme_default":"slb_default","ui_labels":{"loading":"Loading","close":"Close","nav_next":"Next","nav_prev":"Previous","slideshow_start":"Start slideshow","slideshow_stop":"Stop slideshow","group_status":"Item %current% of %total%"}}); }
+if ( !!window.SLB && SLB.has_child('View.assets') ) { {$.extend(SLB.View.assets, {"951292425":{"id":11,"type":"image","source":"http:\/\/tiradscalculator.com\/wp-content\/uploads\/2017\/05\/TIRADS-2017-Flow-Chart.jpg","internal":true,"sizes":{"thumbnail":{"file":"TIRADS-2017-Flow-Chart-150x150.jpg","width":150,"height":150,"mime-type":"image\/jpeg"},"medium":{"file":"TIRADS-2017-Flow-Chart-300x227.jpg","width":300,"height":227,"mime-type":"image\/jpeg"},"medium_large":{"file":"TIRADS-2017-Flow-Chart-768x582.jpg","width":768,"height":582,"mime-type":"image\/jpeg"},"post-image":{"file":"TIRADS-2017-Flow-Chart-620x470.jpg","width":620,"height":470,"mime-type":"image\/jpeg"},"original":{"file":"2017\/05\/TIRADS-2017-Flow-Chart.jpg","width":814,"height":617}},"image_meta":{"aperture":"0","credit":"J W","camera":"","caption":"","created_timestamp":"1494525107","copyright":"","focal_length":"0","iso":"0","shutter_speed":"0","title":"","orientation":"0","keywords":[]},"description":"","title":"TIRADS 2017 Flow Chart","caption":""}});} }
+/* THM */
+if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_baseline',{"name":"Baseline","parent":"","styles":[{"handle":"base","uri":"http:\/\/tiradscalculator.com\/wp-content\/plugins\/simple-lightbox\/themes\/baseline\/css\/style.css","deps":[]}],"layout_raw":"<div class=\"slb_container\"><div class=\"slb_content\">{{item.content}}<div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><div class=\"slb_controls\"><span class=\"slb_close\">{{ui.close}}<\/span><span class=\"slb_slideshow\">{{ui.slideshow_control}}<\/span><\/div><div class=\"slb_loading\">{{ui.loading}}<\/div><\/div><div class=\"slb_details\"><div class=\"inner\"><div class=\"slb_data\"><div class=\"slb_data_content\"><span class=\"slb_data_title\">{{item.title}}<\/span><span class=\"slb_group_status\">{{ui.group_status}}<\/span><div class=\"slb_data_desc\">{{item.description}}<\/div><\/div><\/div><div class=\"slb_nav\"><span class=\"slb_prev\">{{ui.nav_prev}}<\/span><span class=\"slb_next\">{{ui.nav_next}}<\/span><\/div><\/div><\/div><\/div>"}); }if ( !!window.SLB && SLB.has_child('View.extend_theme') ) { SLB.View.extend_theme('slb_default',{"name":"Default (Light)","parent":"slb_baseline","styles":[{"handle":"base","uri":"http:\/\/tiradscalculator.com\/wp-content\/plugins\/simple-lightbox\/themes\/default\/css\/style.css","deps":[]}]}); }})})(jQuery);}/* ]]> */</script>
+<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+	        
+	</body>
+</html>
